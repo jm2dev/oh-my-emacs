@@ -356,7 +356,6 @@ Till now, Oh-my-emacs includes:
   (ome-load "ome-completion.org")
   (ome-load "ome-keybindings.org")
   (ome-load "ome-org.org")
-  (ome-load "ome-advanced.org")
   (ome-load "ome-writing.org")
   (ome-load "ome-cc.org")
   (ome-load "ome-lisp.org")

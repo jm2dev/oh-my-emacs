@@ -49,9 +49,9 @@ self-adapting.
 #+BEGIN_SRC emacs-lisp
   ;; frame font
   ;; Setting English Font
-  (if (member "Monaco" (font-family-list))
+  (if (member "Source Code Pro" (font-family-list))
       (set-face-attribute
-       'default nil :font "Monaco 12"))
+       'default nil :font "Source Code Pro 14"))
 #+END_SRC
 
 * Full screen support
@@ -80,20 +80,20 @@ starting point.
   ;; (global-set-key (kbd "<f11>") 'toggle-fullscreen)
 #+END_SRC
 
-* Solarized Color Theme
+* Zenburn Color Theme
   :PROPERTIES:
   :CUSTOM_ID: color-theme
   :END:
 
-[[http://ethanschoonover.com/solarized][Solarized]] is my favourite color theme. it is available for multiple
+Zenburn is my favourite color theme. it is available for multiple
 applications, not only for emacs. I'll set this as the default theme for
 oh-my-emacs.
 #+NAME: color-theme
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'el-get-sources
-               '(:name color-theme-solarized
+               '(:name zenburn-theme
                        :after (progn
-                                (load-theme 'solarized-dark t))))
+                                (load-theme 'zenburn t))))
 #+END_SRC
 
 * Powerline
