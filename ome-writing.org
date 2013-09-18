@@ -5,6 +5,25 @@ This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 This file contains some packages for document writing.
 
+* RestructuredText
+  :PROPERTIES:
+  :CUSTOM_ID: restructuredtext
+  :END:
+See [[http://docutils.sourceforge.net/docs/user/emacs.html][restructuredText for emacs]].
+
+#+NAME: restructuredtext
+#+BEGIN_SRC emacs-lisp
+(require 'rst)
+
+(setq auto-mode-alist
+      (append '(("\\.txt$" . rst-mode)
+                ("\\.rst$" . rst-mode)
+                ("\\.rest$" . rst-mode)) auto-mode-alist))
+
+(add-hook 'rst-adjust-hook 'rst-toc-update)
+#+END_SRC
+
+
 * Markdown
   :PROPERTIES:
   :CUSTOM_ID: markdown
