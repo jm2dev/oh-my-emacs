@@ -362,6 +362,7 @@ Till now, Oh-my-emacs includes:
   (ome-load "ome-python.org")
   (ome-load "ome-auto-mode.org")
   (ome-load "ome-tex.org")
+  (ome-load "ome-scala.org")
 #+END_SRC
 
 ** Load User/System Specific Files

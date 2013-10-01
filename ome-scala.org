@@ -1,0 +1,57 @@
+#+TITLE: Oh My Emacs Scala
+#+OPTIONS: toc:2 num:nil ^:nil
+
+This file contains some settings for [[http://scala-lang.org][Scala]].
+
+* Prerequisites
+** Mandatory
+- [[http://scala-sbt.org][SBT]]
+- [[https://github.com/aemoncannon/ensime][Ensime]]
+
+* Scala
+  :PROPERTIES:
+  :CUSTOM_ID: scala
+  :END:
+[[http://scala-lang.org][Scala]] is modern software language that run on top of the JVM and supports
+Object Oriented Programming and Functional Programming.
+
+#+NAME: scala
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'el-get-sources
+             '(:name scala-mode2))
+
+(require 'scala-mode2)
+#+END_SRC
+
+The ENhanced Scala Interaction Mode for Emacs, [[https://github.com/aemoncannon/ensime][ENSIME]] for short.
+
+#+NAME: ensime
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/ensime/elisp/")
+(require 'ensime)
+(add-hook 'scala-mode-hook
+          '(lambda ()
+             (scala-mode-feature-electric-mode)
+             ))
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(push "/usr/local/bin/" exec-path)
+(push "~/bin/" exec-path)
+#+END_SRC
+
+** Syntax highlighting tweaks
+From [[http://t-rex-programming.blogspot.co.uk/2012/02/emacs-as-ide-for-play-20-framework.html][play with emacs]].
+
+#+BEGIN_SRC emacs-Lisp
+    (Setq Ensime-Sem-High-Faces
+    '(
+    (Var . (:Foreground "#Ff2222"))
+    (Val . (:Foreground "#111111"))
+    (Varfield . (:Foreground "#Ff6666"))
+    (Valfield . (:Foreground "#666666"))
+    (Functioncall . (:Foreground "#84bee3"))
+    (Param . (:Foreground "#111111"))
+    (Class . Font-Lock-Type-Face)
+    (Trait . (:Foreground "#084ea8"))
+    (Object . (:Foreground "#026df7"))
+    (Package . Font-Lock-Preprocessor-Face)))
+#+END_SRC
