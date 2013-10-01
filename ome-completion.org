@@ -3,6 +3,19 @@
 
 This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
+* El-get Packages
+  :PROPERTIES:
+  :CUSTOM_ID: completion-el-get-packages
+  :END:
+
+#+NAME: completion-el-get-packages
+#+CAPTION: El-get packages for ome-completion module
+|                 | Status   | Description                               |
+|-----------------+----------+-------------------------------------------|
+| [[http://cx4a.org/software/auto-complete/][auto-completion]] | Required | I really like it.                         |
+| [[https://github.com/emacs-helm/helm][helm]]            | Required | Completion everywhere, highly recommended. |
+| [[https://github.com/capitaomorte/yasnippet][YASnippet]]       | Required | Quick snippet template insertion.         |
+
 * Hippie expand
 =M-x hippie-expand= is a single command providing a variety of completions and
 expansions. The following code segment comes from [[https://github.com/bbatsov/prelude][Emacs Prelude]].
@@ -112,6 +125,24 @@ that integrates pcomplete as a completion backend to auto-complete.
     '((candidates . ac-pcomplete)))
 #+END_SRC
 
+** Auto-complete usability matrix
+   :PROPERTIES:
+   :CUSTOM_ID: auto-complete-usability-matrix
+   :END:
+
+Semantic completion based on [[http://cx4a.org/software/auto-complete/][auto-complete]] is one of the major goals of
+oh-my-emacs. The following matrix show the current status of oh-my-emacs
+semantic completion.
+
+#+NAME: auto-complete-usability-matrix
+|             | AC Usability | AC Backend          | Detail                             |
+|-------------+--------------+---------------------+------------------------------------|
+| C/C++       |          80% | [[https://github.com/brianjcj/auto-complete-clang][auto-complete-clang]] | Issue with function argument list. |
+| Python      |         100% | [[https://github.com/jorgenschaefer/elpy][elpy]]                | elpy is amazing.                   |
+| Emacs Lisp  |         100% | Builtin             | You kown that.                     |
+| Common Lisp |         100% | [[https://github.com/purcell/ac-slime][ac-slime]]            | SLIME is amazing, too.             |
+| Scheme      |          80% | [[https://github.com/xiaohanyu/ac-geiser][ac-geiser]]           | Yeah, I'm the author of ac-geiser. |
+| Clojure     |         100% | [[https://github.com/clojure-emacs/ac-nrepl][ac-nrepl]]            | It even completes Java!            |
 
 * Helm
   :PROPERTIES:

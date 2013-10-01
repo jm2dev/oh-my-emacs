@@ -23,6 +23,17 @@ See [[http://docutils.sourceforge.net/docs/user/emacs.html][restructuredText for
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 #+END_SRC
 
+* El-get packages
+  :PROPERTIES:
+  :CUSTOM_ID: writing-el-get-packages
+  :END:
+
+#+NAME: writing-el-get-packages
+#+CAPTION: El-get packages for ome-writing module
+|               | Status   | Description                                          |
+|---------------+----------+------------------------------------------------------|
+| [[http://jblevins.org/projects/markdown-mode/][markdown-mode]] | Required | Markdown is so popular that this package is required |
+
 
 * Markdown
   :PROPERTIES:

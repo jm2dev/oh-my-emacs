@@ -10,18 +10,25 @@
 #+END_QUOTE
 
 * Prerequisites
-** Mandatory
+  :PROPERTIES:
+  :CUSTOM_ID: ome-prerequisites
+  :END:
+
 The following software is really basic that almost every el-get package will
 need one of them.
 
-- [[http://savannah.nongnu.org/projects/cvs][cvs]]
-- [[http://mercurial.selenic.com/][mercurial]]
-- [[http://git-scm.com/][git]]
-- [[http://www.gnu.org/software/make/][make]]
-- [[http://www.gnu.org/software/texinfo/][texinfo]]
-- [[http://gcc.gnu.org/][gcc]]
-- [[http://www.gnu.org/software/automake/][automake]]
-- [[http://www.gnu.org/software/autoconf/][autoconf]]
+#+NAME: ome-prerequisites
+#+CAPTION: Prerequisites for all oh-my-emacs module.
+|           | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
+|-----------+---------+--------------------+-----------+--------+----------+------------|
+| [[http://savannah.nongnu.org/projects/cvs][cvs]]       |         |                    |           |        |          | Yes        |
+| [[http://mercurial.selenic.com/][mercurial]] |         |                    |           |        |          | Yes        |
+| [[http://git-scm.com/][git]]       |         |                    |           |        |          | Yes        |
+| [[http://www.gnu.org/software/make/][make]]      |         |                    |           |        |          | Yes        |
+| [[http://www.gnu.org/software/texinfo/][texinfo]]   |         |                    |           |        |          | Yes        |
+| [[http://gcc.gnu.org/][gcc]]       |         |                    |           |        |          | Yes        |
+| [[http://www.gnu.org/software/automake/][automake]]  |         |                    |           |        |          | Yes        |
+| [[http://www.gnu.org/software/autoconf/][autoconf]]  |         |                    |           |        |          | Yes        |
 
 * Introduction
   :PROPERTIES:
@@ -143,6 +150,8 @@ So the first thing oh-my-emacs do to your emacs is to install =el-get=:
       (let (el-get-master-branch)
         (goto-char (point-max))
         (eval-print-last-sexp))))
+
+  (add-to-list 'el-get-recipe-path "~/.emacs.d/ome-el-get-recipes")
 
   ;; (el-get 'sync)
 #+END_SRC
@@ -347,6 +356,7 @@ Till now, Oh-my-emacs includes:
 - [[file:ome-python.org][ome-python.org]]: python settings, life is short, =elpy= is amazing.
 - [[file:ome-auto-mode.org][ome-auto-mode.org]]: small and convenient settings for some minor mode package.
 - [[file:ome-tex.org][ome-tex.org]]: AUCTeX and CDLaTeX for \TeX{} editing.
+- [[file:ome-ruby.org][ome-ruby.org]]: Ruby support including =inf-ruby= and =smartparens-ruby=.
 
 #+NAME: load various ome files
 #+BEGIN_SRC emacs-lisp
@@ -363,6 +373,7 @@ Till now, Oh-my-emacs includes:
   (ome-load "ome-auto-mode.org")
   (ome-load "ome-tex.org")
   (ome-load "ome-scala.org")
+  (ome-load "ome-ruby.org")
 #+END_SRC
 
 ** Load User/System Specific Files

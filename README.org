@@ -41,11 +41,11 @@ by [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]].
   install= and explicitly manually management of =load-path=. =el-get= also
   provides automatic documentation management, customizable user's recipe
   support, etc.
-- Self-adapted, only install necessary packages when it satisfy the
+- Self-adapted, only install necessary packages when it satisfies the
   prerequisities. You need to install [[http://clang.llvm.org/][clang]] for [[https://github.com/brianjcj/auto-complete-clang][auto-complete-clang]], for
   example.
 - Modular, only load necessary packages as you need.
-- Literate, each package have comprehensive documentation or even a tiny
+- Literate, each package has comprehensive documentation or even a tiny
   tutorial with it, together with necessary web links. Say goodbye to old,
   out-dated emacs lisp code from Google.
 - Work as expected, completion every where when possible, semantic code
@@ -56,13 +56,23 @@ by [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]].
 * Quick Start
 Simple enough, first, ensure you have a good network(Chinese users should get
 rid of GFW when possible to avoid many weird problems during first startup);
-second, *ensure that you have installed the necessary tools* pointed out by the
-*Prerequisites* sections from oh-my-emacs modules. Basically, you need to
-install git/cvs/mercurial, make/automake/autoconf, texinfo and gcc, which is
-the mandatory prerequisites of [[https://github.com/xiaohanyu/oh-my-emacs/blob/master/ome.org][ome.org]].
+second, *ensure that you have installed the necessary tools* pointed out by
+the *Prerequisites* sections from oh-my-emacs modules. Basically, you need to
+install the following packages in you operating system, which is the mandatory
+prerequisites of [[https://github.com/xiaohanyu/oh-my-emacs/blob/master/ome.org][ome.org]]:
+- [[http://savannah.nongnu.org/projects/cvs][cvs]]
+- [[http://mercurial.selenic.com/][mercurial]]
+- [[http://git-scm.com/][git]]
+- [[http://www.gnu.org/software/make/][make]]
+- [[http://www.gnu.org/software/texinfo/][texinfo]]
+- [[http://gcc.gnu.org/][gcc]]
+- [[http://www.gnu.org/software/automake/][automake]]
+- [[http://www.gnu.org/software/autoconf/][autoconf]]
+
+Please backup your old =.emacs= and =.emacs.d= before you join the journey:
 
 #+BEGIN_SRC sh
-git clone git@github.com:xiaohanyu/oh-my-emacs.git $HOME/.emacs.d
+git clone https://github.com/xiaohanyu/oh-my-emacs $HOME/.emacs.d
 #+END_SRC
 
 Then just fire up your Emacs and make a coffee, and you should have a
